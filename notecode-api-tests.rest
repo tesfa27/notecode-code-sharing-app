@@ -1,0 +1,18 @@
+#### health check
+GET http://localhost:3000/
+
+### Create a new code snippet
+POST http://localhost:3000/api/snippets
+Content-Type: application/json
+
+{
+  "code": "<html><body><h1>Hello NoteCode</h1></body></html>",
+  "language": "html",
+  "theme": "vs-dark"
+}
+
+### Get snippet by ID (replace ID)
+GET http://localhost:3000/api/snippets/695bcbf309e1567f8fcff13f
+Accept: application/json
+
+

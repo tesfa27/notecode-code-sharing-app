@@ -11,9 +11,8 @@ app.use(express.json());
 
 app.get('/', (req, res) => res.json({ status: 'ok' }));
 
-// TODO: mount routes when ready
-// const snippetRoutes = require('./routes/snippet');
-// app.use('/api/snippets', snippetRoutes);
+const snippetRoutes = require('./routes/snippet');
+app.use('/api/snippets', snippetRoutes);
 
 async function start() {
   await connectDB();
