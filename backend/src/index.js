@@ -1,12 +1,12 @@
 require('dotenv').config();
 const express = require('express');
-const cors = require('cors');
 const { connectDB } = require('./db');
+const { corsHandler } = require('./middleware/corsHandler');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(cors());
+app.use(corsHandler);
 app.use(express.json());
 
 app.get('/', (req, res) => res.json({ status: 'ok' }));
